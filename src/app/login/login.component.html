@@ -1,0 +1,57 @@
+<!-- Header Start -->
+<div class="container-fluid bg-primary  mb-5 page-header">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-3 text-white animated slideInDown">Login</h1>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+<!-- Contact Start -->
+<div class="container-xxl ">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Login</h6>
+
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6 offset-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                <form #loginForm="ngForm" (ngSubmit)="submit()">
+                    <div class=" row g-3">
+
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="subject" placeholder="Enter Category Name"
+                                    name="email" [(ngModel)]="login.email" required="">
+                                <label for="subject">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="subject"
+                                    placeholder="Enter Category Name" name="password" [(ngModel)]="login.password" required="">
+                                <label for="subject">Password</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit" [disabled]="loginForm.invalid">Sign In</button>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md">
+                                Don't have an account ? <span routerLink="/register"  style="cursor: pointer;">Register</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
